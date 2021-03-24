@@ -1,5 +1,5 @@
 # EasyWedding
-This app is the final project I chose to implement as a Computer Science student.
+This app is my degree final  project.
 
 Simulation are in Hebrew. However, there's also support for English.
 
