@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_viewgroup_fragment_chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_chat"
+    tools:context=".ChatFragment">
+
+    <!-- Empty layout in case the user don't have a chat -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/empty_chat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/empty_chat_imageview"
+            android:layout_width="320dp"
+            android:layout_height="256dp"
+            android:background="@drawable/vector_empty_chat"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_chat_message"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@id/empty_chat_imageview"
+            app:layout_constraintLeft_toLeftOf="@id/empty_chat_imageview"
+            app:layout_constraintTop_toTopOf="@id/empty_chat_imageview"
+            app:layout_constraintRight_toRightOf="@id/empty_chat_imageview"
+            android:layout_marginBottom="64dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/divider"/>
+
+    <!-- A horizontal line between the chatbox and RecyclerView -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"
+        android:layout_marginBottom="0dp"
+        android:layout_above="@id/message_interface_layout"
+         />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/message_interface_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/white">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/message_edittext"
+            android:maxLines="5"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:paddingVertical="12dp"
+            android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
+            android:imeOptions="actionSend|flagNoEnterAction"
+            android:hint="@string/hint_edittext_chat"
+            android:background="@null"/>
+
+        <ImageButton
+            android:id="@+id/chat_attach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_attach_file_24"
+            android:backgroundTint="@android:color/white"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="@string/attach_files_to_chat" />
+        <Button
+            android:id="@+id/send_message_button"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:text="@string/chat_send_message"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+
+
+
+
+             />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_delete_feature"
+        android:title="@string/title_delete_item"
+        app:showAsAction="never"
+        android:orderInCategory="@integer/action_delete_item"/>
+
+    <item
+        android:id="@+id/action_call_supplier"
+        android:title="@string/title_call_supplier"
+        app:showAsAction="never"
+        android:orderInCategory="@integer/action_call_supplier_order"/>
+
+
+</menu>

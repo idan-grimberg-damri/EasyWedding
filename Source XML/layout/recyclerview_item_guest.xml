@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="12dp"
+        android:paddingStart="12dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/list_item_guest_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="@android:color/black"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toStartOf="@id/list_item_invite_text"
+            app:layout_constraintBottom_toBottomOf="@id/list_item_arriving_image"
+            app:layout_constraintStart_toEndOf="@id/list_item_arriving_image"
+            app:layout_constraintTop_toTopOf="@id/list_item_arriving_image"
+
+            android:textDirection="locale"
+            tools:text="Sasi Bishbash" />
+
+        <TextView
+            android:id="@+id/list_item_invite_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintEnd_toStartOf="@id/features_item_popup"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Invitation sent" />
+
+        <ImageView
+            android:id="@+id/list_item_arriving_image"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/description_guest_arrival" />
+
+        <ImageButton
+            android:id="@+id/features_item_popup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/popup_menu_guest_descr" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

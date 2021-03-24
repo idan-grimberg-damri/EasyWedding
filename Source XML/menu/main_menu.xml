@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <item
+       android:id="@+id/action_request_access"
+       android:title="@string/request_data"
+       app:showAsAction="never"
+       android:orderInCategory="@integer/action_add_owner_order"/>
+
+    <item
+        android:id="@+id/action_grant_access"
+        android:title="@string/open_access"
+        app:showAsAction="never"
+        android:orderInCategory="@integer/action_open_access_order"/>
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/action_logout_title"
+        app:showAsAction="never"
+        android:orderInCategory="@integer/action_logout_order"/>
+
+
+
+</menu>
