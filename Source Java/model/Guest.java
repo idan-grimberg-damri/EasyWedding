@@ -14,11 +14,11 @@ public class Guest implements Parcelable {
 
     private String name;
     private String phoneNumber;
-    private int priority;
     private String joiners;
+    private String email;
+    private int priority;
     private boolean arrive;
     private boolean invited;
-    private String email;
     private boolean submitted; //submitted for arrival confirmation.
 
 
